@@ -1,6 +1,8 @@
-# A drafting module for the LÖVE 2D game engine
+# draft
 
-This is a simple drafting module for the [LÖVE 2D game engine](https://love2d.org/). It makes it easy to draft primitive shapes, and some more luxurious ones.
+## About
+
+draft is a simple drafting module for [LÖVE 2D](https://love2d.org/). It makes it easy to draft primitive shapes, and some more luxurious ones.
 
 ## Loading the module
 
