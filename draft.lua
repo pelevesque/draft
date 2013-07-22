@@ -6,7 +6,7 @@ Author:    Pierre-Emmanuel Lévesque
 Email:     pierre.e.levesque@gmail.com
 Date:      July 26th, 2012
 Copyright: Copyright 2012, Pierre-Emmanuel Lévesque
-License:   MIT license - @see README.md
+License:   MIT license - @see LICENSE.md
 --]]
 
 ----------------------------------------------------
