@@ -94,7 +94,7 @@ function draft:triangleIsosceles(cx, cy, width, height, mode)
 	local x3 = cx - widthRadius
 	local y3 = y2
 	if mode then
-		love.graphics.triangle(mode, x1, y1, x2, y2, x3, y3)
+		love.graphics.polygon(mode, x1, y1, x2, y2, x2, y3)
 	end
 	return {x1, y1, x2, y2, x3, y3}
 end
@@ -120,7 +120,7 @@ function draft:triangleRight(cx, cy, width, height, mode)
 	local x3 = x1
 	local y3 = y2
 	if mode then
-		love.graphics.triangle(mode, x1, y1, x2, y2, x3, y3)
+		love.graphics.polygon(mode, x1, y1, x2, y2, x2, y3)
 	end
 	return {x1, y1, x2, y2, x3, y3}
 end
