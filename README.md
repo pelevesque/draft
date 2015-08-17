@@ -39,9 +39,9 @@ The drafting functions can then be called inside the `love.draw()` function.
 
  - Due to LÖVE 2D drawing limitations, the `draft:star` function fails in _fill mode_. This is because LÖVE 2D is unable to properly fill concave polygons.
 
- - The `draft:compass` function is a powerful function used to draw curves. Notably, it accepts a function for the scale parameter which permits the drawing of complex shapes. You can look at the code for `draft:star` and `draft:egg` for examples of usage. You can also look at the `draft:compass` function too see how it is called. The parameters are (x, y, i, numSegments).
+ - The `draft:compass` function is a powerful function used to draw curves. Notably, it accepts a function for the scale parameter which permits the drawing of complex shapes. You can look at the code for `draft:star` and `draft:egg` for examples of usage. You can also look at the `draft:compass` function too see how it is called.
 
- - The linkers create line between points.
+ - The linkers create line between points. Try them, they are quite powerful!
 
 ## Draft function list
 
@@ -105,7 +105,7 @@ draft:linkTangle(v1, v2, mode)
 draft:linkWeb(v, mode)  
 draft:linkTangleWebs(v1, v2, mode)  
 
-## Short Program Showing Off Linking - Try It!
+## Short program showing off linking - try it!
 
     -- load draft  
     local draft = require('draft')  
@@ -136,7 +136,7 @@ draft:linkTangleWebs(v1, v2, mode)
         draft:linkWeb(v)  
     end  
 
-## test.lua
+## test.lua (included in this distribution)
 
     -- load draft  
     local draft = require('draft')  
