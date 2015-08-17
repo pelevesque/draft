@@ -9,7 +9,7 @@ draft is a simple drafting module for [LÖVE 2D](https://love2d.org/). It makes 
 To load the module, use the following code.
 
     local draft = require('draft')
-    draft = draft(_mode_)
+    draft = draft(modeOption)
 
 Setting _mode_ is optional. The default is _fill_.
 
@@ -53,11 +53,17 @@ draft:getMode()
 draft:setMode(mode)  
 
 ### Shapes
+
+#### Primary Shapes (using core drawing functions)
+
 draft:line(points, mode)  
 draft:triangleIsosceles(cx, cy, width, height, mode)  
 draft:triangleRight(cx, cy, width, height, mode)  
 draft:rectangle(cx, cy, width, height, mode)  
 draft:polygon(vertices, mode)  
+
+#### Secondary Shapes (using primary shape functions)
+
 draft:triangleEquilateral(cx, cy, width, mode)  
 draft:square(cx, cy, length, mode)  
 draft:trapezoid(cx, cy, width, height, widthTop, widthTopOffset, mode)  
@@ -65,11 +71,18 @@ draft:rhombus(cx, cy, width, height, mode)
 draft:trapezium(cx, cy, widthLeft, widthRight, height, depth, mode)  
 draft:gem(cx, cy, widthTop, widthMiddle, height, depth, mode)  
 draft:diamond(cx, cy, width, mode)  
+
+#### Tertiary Shapes (using secondary shape functions)
+
+
 draft:rhombusEquilateral(cx, cy, length, mode)  
 draft:lozenge(cx, cy, width, mode)  
 draft:kite(cx, cy, width, height, depth, mode)  
 draft:trapezoidIsosceles(cx, cy, width, height, widthTop, mode)  
 draft:parallelogram(cx, cy, width, height, widthOffset, mode)  
+
+#### Curved Shapes
+
 draft:compass(cx, cy, width, arcAngle, startAngle, numSegments, wrap, scale, mode)  
 draft:circle(cx, cy, radius, numSegments, mode)  
 draft:arc(cx, cy, radius, arcAngle, startAngle, numSegments, mode)  
@@ -81,6 +94,9 @@ draft:ellipticBow(cx, cy, width, height, arcAngle, startAngle, numSegments, mode
 draft:ellipticPie(cx, cy, width, height, arcAngle, startAngle, numSegments, mode)  
 draft:semicircle(cx, cy, width, startAngle, numSegments, mode)  
 draft:dome(cx, cy, width, startAngle, numSegments, mode)  
+
+#### Complex Shapes
+
 draft:star(cx, cy, width, widthInner, numPoints, startAngle, mode)  
 draft:egg(cx, cy, width, syBottom, syTop, numSegments, mode)
 
