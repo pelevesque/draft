@@ -103,7 +103,38 @@ draft:egg(cx, cy, width, syBottom, syTop, numSegments, mode)
 draft:linkLadder(v1, v2, mode)  
 draft:linkTangle(v1, v2, mode)  
 draft:linkWeb(v, mode)  
-draft:linkTangleWebs(v1, v2, mode)
+draft:linkTangleWebs(v1, v2, mode)  
+
+## Short Program Showing Off Linking - Try It!
+
+    -- load draft  
+    local draft = require('draft')  
+    draft = draft()  
+    
+    function love.load()  
+        limitUpper = 100  
+        limitLower = 4  
+        numSegments = limitLower  
+        direction = "up"  
+        step = 0.01  
+    end  
+    
+    function love.update(dt)  
+        if numSegments > limitUpper and direction == "up" then  
+            direction = "down"  
+        elseif numSegments < limitLower and direction == "down" then  
+            direction = "up"  
+        elseif direction == "up" then  
+            numSegments = numSegments + step  
+        else  
+            numSegments = numSegments - step  
+        end  
+    end  
+    
+    function love.draw()  
+        local v = draft:egg(400, 300, 1500, 1, 1, numSegments, 'line')  
+        draft:linkWeb(v)  
+    end  
 
 ## test.lua
 
