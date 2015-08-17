@@ -21,10 +21,10 @@ The drafting functions can then be called inside the `love.draw()` function.
     draft = draft()
     
     function love.draw()
-        draft:rectangle(210, 30, 50, 30, 'line')
-        draft:bow(200, 200, 50, 2)
-        local vertices = draft:square(400, 200, 300, 'line')
-        draft:linkWeb(vertices)
+        draft:rectangle(300, 100, 50, 30)
+        draft:rectangle(500, 100, 50, 30)
+        draft:rhombus(400, 200, 65, 65)
+        draft:bow(390, 280, 100, 2.5, 0, 10, 'line')
     end
 
 ## Notes
