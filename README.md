@@ -9,7 +9,7 @@ draft is a simple drafting module for [LÖVE 2D](https://love2d.org/). It makes 
 To load the module, use the following code.
 
     local draft = require('draft')
-    draft = draft(mode)
+    draft = draft(_mode_)
 
 Setting _mode_ is optional. The default is _fill_.
 
@@ -18,12 +18,12 @@ The drafting functions can then be called inside the `love.draw()` function.
 ## Usage example
 
     local draft = require('draft')
-    draft = draft('fill')
+    draft = draft()
     
     function love.draw()
-        draft:rectangle(210, 25, 50, 30, 'line')
+        draft:rectangle(210, 30, 50, 30, 'line')
         draft:bow(200, 200, 50, 2)
-        local vertices = draft:square(100, 100, 300)
+        local vertices = draft:square(400, 200, 300, 'line')
         draft:linkWeb(vertices)
     end
 
