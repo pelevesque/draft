@@ -163,7 +163,7 @@ function draft:polygon(vertices, mode)
 	if mode then
 		if (mode == 'fill' and not love.math.isConvex(vertices)) then
 			local triangles = love.math.triangulate(vertices)
-			for k, v in pairs(triangles) do
+			for _, v in pairs(triangles) do
 				self:polygon(v, 'fill')
 			end
 		else
