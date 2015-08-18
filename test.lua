@@ -104,7 +104,7 @@ function love.draw()
 	-- complex shapes
 	love.graphics.setColor{127, 0, 127}
 	draft:star(455, 220, 80, 25, 4, 2)
-	draft:star(455, 220, 55, 10, 4, 2, 'fill') -- star fills wrong due to Love2D limitations
+	draft:star(455, 220, 55, 10, 4, 2, 'fill')
 	draft:star(500, 500, 80, 14, 6, nil, false)
 	draft:egg(540, 220, 50)
 	draft:egg(540, 220, 30, nil, nil, nil, 'fill')
