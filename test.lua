@@ -1,5 +1,5 @@
 -- load draft
-local draft = require('draft')
+local draft = require('draft/draft')
 draft = draft()
 
 function love.draw()
