@@ -103,7 +103,7 @@ draft:linkTangle(v1, v2, mode)
 draft:linkWeb(v, mode)  
 draft:linkTangleWebs(v1, v2, mode)  
 
-## Short program showing off linking - try it!
+## examples/linker.lua (shows off linking)
 
     -- load draft  
     local draft = require('draft')  
@@ -134,7 +134,7 @@ draft:linkTangleWebs(v1, v2, mode)
         draft:linkWeb(v)  
     end  
 
-## test.lua (included in this distribution)
+## test.lua
 
     -- load draft  
     local draft = require('draft')  
