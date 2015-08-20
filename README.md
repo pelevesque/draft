@@ -9,8 +9,8 @@ draft is a simple drafting module for [LÖVE 2D](https://love2d.org/). It makes 
 To load the module, use the following code.
 
     -- modify the path depending where draft resides
-    local draft = require('draft/draft')
-    draft = draft(modeOption)
+    local Draft = require('draft')
+    local draft = Draft(modeOption)
 
 Setting _mode_ is optional. The default is _fill_.
 
@@ -18,8 +18,8 @@ The drafting functions can then be called inside the `love.draw()` function.
 
 ## Usage example
 
-    local draft = require('draft/draft')
-    draft = draft()
+    local Draft = require('draft')
+    local draft = Draft()
     
     function love.draw()
         draft:rectangle(300, 100, 50, 30)
@@ -107,8 +107,8 @@ draft:linkTangleWebs(v1, v2, mode)
 ## example_linker.lua (shows off linking)
 
     -- load draft  
-    local draft = require('draft/draft')  
-    draft = draft()  
+    local Draft = require('draft')  
+    local draft = Draft()  
     
     function love.load()  
         limitUpper = 100  
@@ -138,8 +138,8 @@ draft:linkTangleWebs(v1, v2, mode)
 ## test.lua (tests every draft method)
 
     -- load draft  
-    local draft = require('draft/draft')  
-    draft = draft()  
+    local Draft = require('draft')  
+    local draft = Draft()  
     
     function love.draw()  
     

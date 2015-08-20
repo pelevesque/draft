@@ -1,6 +1,6 @@
 -- load draft
-local draft = require('draft/draft')
-draft = draft()
+local Draft = require('draft')
+local draft = Draft()
 
 function love.load()
 	limitUpper = 100
