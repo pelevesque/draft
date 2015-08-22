@@ -8,9 +8,11 @@ draft is a simple drafting module for [LÖVE 2D](https://love2d.org/). It makes 
 
 To load the module, use the following code.
 
-    -- modify the path depending where draft resides
-    local Draft = require('draft')
-    local draft = Draft(modeOption)
+```lua
+-- modify the path depending where draft resides
+local Draft = require('draft')
+local draft = Draft(modeOption)
+```
 
 Setting _mode_ is optional. The default is _fill_.
 
@@ -18,15 +20,17 @@ The drafting functions can then be called inside the `love.draw()` function.
 
 ## Usage example
 
-    local Draft = require('draft')
-    local draft = Draft()
+```lua
+local Draft = require('draft')
+local draft = Draft()
     
-    function love.draw()
-        draft:rectangle(300, 100, 50, 30)
-        draft:rectangle(500, 100, 50, 30)
-        draft:rhombus(400, 200, 65, 65)
-        draft:bow(390, 280, 100, 2.5, 0, 10, 'line')
-    end
+function love.draw()
+    draft:rectangle(300, 100, 50, 30)
+    draft:rectangle(500, 100, 50, 30)
+    draft:rhombus(400, 200, 65, 65)
+    draft:bow(390, 280, 100, 2.5, 0, 10, 'line')
+end
+```
 
 ## Notes
 
@@ -106,6 +110,7 @@ draft:linkTangleWebs(v1, v2, mode)
 
 ## example_linker.lua (shows off linking)
 
+```lua
     -- load draft  
     local Draft = require('draft')  
     local draft = Draft()  
@@ -134,9 +139,11 @@ draft:linkTangleWebs(v1, v2, mode)
         local v = draft:egg(400, 300, 1500, 1, 1, numSegments, 'line')  
         draft:linkWeb(v)  
     end  
+```
 
 ## test.lua (tests every draft method)
 
+```lua
     -- load draft  
     local Draft = require('draft')  
     local draft = Draft()  
@@ -286,3 +293,4 @@ draft:linkTangleWebs(v1, v2, mode)
     draft:linkTangleWebs(v1, v2)  
     
     end
+```
