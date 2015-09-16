@@ -23,7 +23,7 @@ The drafting functions can then be called inside the `love.draw()` function.
 ```lua
 local Draft = require('draft')
 local draft = Draft()
-    
+
 function love.draw()
     draft:rectangle(300, 100, 50, 30)
     draft:rectangle(500, 100, 50, 30)
@@ -114,7 +114,7 @@ draft:linkTangleWebs(v1, v2, mode)
     -- load draft  
     local Draft = require('draft')  
     local draft = Draft()  
-    
+
     function love.load()  
         limitUpper = 100  
         limitLower = 4  
@@ -122,7 +122,7 @@ draft:linkTangleWebs(v1, v2, mode)
         direction = "up"  
         step = 0.01  
     end  
-    
+
     function love.update(dt)  
         if numSegments > limitUpper and direction == "up" then  
             direction = "down"  
@@ -134,7 +134,7 @@ draft:linkTangleWebs(v1, v2, mode)
             numSegments = numSegments - step  
         end  
     end  
-    
+
     function love.draw()  
         local v = draft:egg(400, 300, 1500, 1, 1, numSegments, 'line')  
         draft:linkWeb(v)  
@@ -147,9 +147,9 @@ draft:linkTangleWebs(v1, v2, mode)
     -- load draft  
     local Draft = require('draft')  
     local draft = Draft()  
-    
+
     function love.draw()  
-    
+
     -- getters and setters  
     love.graphics.setColor{255, 255, 255}  
     local y = 100  
@@ -157,7 +157,7 @@ draft:linkTangleWebs(v1, v2, mode)
     love.graphics.print("The current mode is " .. draft:getMode() .. ".", 10, y)  
     draft:setMode('line')  
     love.graphics.print("The new mode is " .. draft:getMode() .. ".", 10, y + 20)  
-    
+
     -- primary shapes  
     love.graphics.setColor{255, 0, 0}  
     draft:line({10, 10, 45, 45, 75, 20})  
@@ -173,7 +173,7 @@ draft:linkTangleWebs(v1, v2, mode)
     draft:polygon({250, 10, 250, 90, 290, 75, 275, 30})  
     draft:polygon({260, 30, 260, 70, 280, 65, 270, 40}, 'fill')  
     draft:polygon({10, 30, 200, 500, 600, 300, 270, 40}, false)  
-    
+
     -- secondary shapes  
     love.graphics.setColor{0, 255, 0}  
     draft:triangleEquilateral(340, 50, 80)  
@@ -197,7 +197,7 @@ draft:linkTangleWebs(v1, v2, mode)
     draft:diamond(730, 30, 50)  
     draft:diamond(730, 30, 40, 'fill')  
     draft:diamond(200, 200, 200, false)  
-    
+
     -- tertiary shapes  
     love.graphics.setColor{0, 0, 255}  
     draft:rhombusEquilateral(50, 200, 80)  
@@ -215,7 +215,7 @@ draft:linkTangleWebs(v1, v2, mode)
     draft:parallelogram(375, 145, 40, 50, 20)  
     draft:parallelogram(375, 145, 35, 35, 15, 'fill')  
     draft:parallelogram(200, 200, 100, 125, 75, false)  
-    
+
     -- curved shapes  
     love.graphics.setColor{127, 127, 127}  
     draft:compass(450, 85, 60, math.rad(135), 0, 10, false, nil)  
@@ -255,12 +255,12 @@ draft:linkTangleWebs(v1, v2, mode)
     draft:egg(540, 220, 50)  
     draft:egg(540, 220, 30, nil, nil, nil, 'fill')  
     draft:egg(500, 500, 30, nil, nil, nil, false)  
-    
+
     -- linkers  
     love.graphics.setColor{255, 127, 0}  
     local v1  
     local v2  
-    
+
     v1 = draft:line({  
         580, 160,  
         580, 180,  
@@ -280,17 +280,17 @@ draft:linkTangleWebs(v1, v2, mode)
         700, 280  
     })  
     draft:linkLadder(v1, v2)  
-    
+
     v1 = draft:square(640, 200, 60)  
     v2 = draft:square(680, 190, 60)  
     draft:linkTangle(v1, v2)  
-    
+
     v1 = draft:diamond(750, 200, 50)  
     draft:linkWeb(v1)  
-    
+
     v1 = draft:square(350, 340, 40)  
     v2 = draft:line({400, 330, 420, 310, 440, 270, 420, 240})  
     draft:linkTangleWebs(v1, v2)  
-    
+
     end
 ```

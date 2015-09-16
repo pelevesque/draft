@@ -4,7 +4,7 @@ local draft = Draft()
 
 function love.load()
 	limitUpper = 100
-	limitLower = 4  
+	limitLower = 4
 	numSegments = limitLower
 	direction = "up"
 	step = 0.01
