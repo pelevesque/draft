@@ -1,3 +1,10 @@
+--[[
+	Unittest
+
+	This program acts as a unittest by testing all
+	of draft's shapes and linkers.
+--]]
+
 -- load draft
 local Draft = require('draft')
 local draft = Draft()
