@@ -40,7 +40,7 @@ end
 
     `local vertices = draft:rectangle(100, 100, 50, 80, false)`
 
- - Look at the file _test.lua_ for examples on how the functions can be called. This file draws all the possible shapes.
+ - Look at the file _main.lua_ for examples on how the functions can be called. This file draws all the possible shapes.
 
  - The `draft:compass` function is a powerful function used to draw curves. Notably, it accepts a function for the scale parameter which permits the drawing of complex shapes. You can look at the code for `draft:star` and `draft:egg` for examples of usage. You can also look at the `draft:compass` function too see how it is called.
 
