@@ -124,11 +124,11 @@ function love.load()
 end  
 
 function love.update(dt)  
-  if numSegments > limitUpper and direction == "up" then  
-    direction = "down"  
-  elseif numSegments < limitLower and direction == "down" then  
-    direction = "up"  
-  elseif direction == "up" then  
+  if numSegments > limitUpper and direction == 'up' then  
+    direction = 'down'  
+  elseif numSegments < limitLower and direction == 'down' then  
+    direction = 'up'
+  elseif direction == 'up' then  
     numSegments = numSegments + step  
   else  
     numSegments = numSegments - step  

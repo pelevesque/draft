@@ -15,9 +15,9 @@ function love.draw()
   love.graphics.setColor{255, 255, 255}
   local y = 100
   draft:setMode('fill')
-  love.graphics.print("The current mode is " .. draft:getMode() .. ".", 10, y)
+  love.graphics.print('The current mode is ' .. draft:getMode() .. '.', 10, y)
   draft:setMode('line')
-  love.graphics.print("The new mode is " .. draft:getMode() .. ".", 10, y + 20)
+  love.graphics.print('The new mode is ' .. draft:getMode() .. '.', 10, y + 20)
 
   -- primary shapes
   love.graphics.setColor{255, 0, 0}
