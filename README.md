@@ -25,10 +25,10 @@ local Draft = require('draft')
 local draft = Draft()
 
 function love.draw()
-    draft:rectangle(300, 100, 50, 30)
-    draft:rectangle(500, 100, 50, 30)
-    draft:rhombus(400, 200, 65, 65)
-    draft:bow(390, 280, 100, 2.5, 0, 10, 'line')
+  draft:rectangle(300, 100, 50, 30)
+  draft:rectangle(500, 100, 50, 30)
+  draft:rhombus(400, 200, 65, 65)
+  draft:bow(390, 280, 100, 2.5, 0, 10, 'line')
 end
 ```
 
@@ -116,27 +116,27 @@ local Draft = require('draft')
 local draft = Draft()  
 
 function love.load()  
-    limitUpper = 100  
-    limitLower = 4  
-    numSegments = limitLower  
-    direction = "up"  
-    step = 0.01  
+  limitUpper = 100  
+  limitLower = 4  
+  numSegments = limitLower  
+  direction = "up"  
+  step = 0.01  
 end  
 
 function love.update(dt)  
-    if numSegments > limitUpper and direction == "up" then  
-        direction = "down"  
-    elseif numSegments < limitLower and direction == "down" then  
-        direction = "up"  
-    elseif direction == "up" then  
-        numSegments = numSegments + step  
-    else  
-        numSegments = numSegments - step  
-    end  
+  if numSegments > limitUpper and direction == "up" then  
+    direction = "down"  
+  elseif numSegments < limitLower and direction == "down" then  
+    direction = "up"  
+  elseif direction == "up" then  
+    numSegments = numSegments + step  
+  else  
+    numSegments = numSegments - step  
+  end  
 end  
 
 function love.draw()  
-    local v = draft:egg(400, 300, 1500, 1, 1, numSegments, 'line')  
-    draft:linkWeb(v)  
+  local v = draft:egg(400, 300, 1500, 1, 1, numSegments, 'line')  
+  draft:linkWeb(v)  
 end  
 ```
