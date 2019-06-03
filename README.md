@@ -119,7 +119,7 @@ function love.load()
   limitUpper = 100  
   limitLower = 4  
   numSegments = limitLower  
-  direction = "up"  
+  direction = 'up'  
   step = 0.01  
 end  
 
