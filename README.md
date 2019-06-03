@@ -2,7 +2,8 @@
 
 ## About
 
-draft is a simple drafting module for [LÖVE 2D](https://love2d.org/). It makes it easy to draft primitive shapes, and some more luxurious ones.
+draft is a simple drafting module for [LÖVE 2D](https://love2d.org/).
+It makes it easy to draft primitive shapes, and some more luxurious ones.
 
 ## Loading the module
 
@@ -34,15 +35,24 @@ end
 
 ## Notes
 
- - The _mode_ can be set when initializing the module, but it can also be overwritten with each drafting function. If you want to overwrite it for many functions, you can use the `draft:getMode` and `draft:setMode` functions.
+ - The _mode_ can be set when initializing the module, but it can also be
+ overwritten with each drafting function. If you want to overwrite it for many
+ functions, you can use the `draft:getMode` and `draft:setMode` functions.
 
- - You can also set the _mode_ to _false_ if you only want to get the vertices, and not draw the shape. For example, using the following code would get the vertices for a rectangle without drawing it.
+ - You can also set the _mode_ to _false_ if you only want to get the vertices,
+ and not draw the shape. For example, using the following code would get the
+ vertices for a rectangle without drawing it.
 
     `local vertices = draft:rectangle(100, 100, 50, 80, false)`
 
- - Look at the file _main.lua_ for examples on how the functions can be called. This file draws all the possible shapes.
+ - Look at the file _main.lua_ for examples on how the functions can be called.
+ This file draws all the possible shapes.
 
- - The `draft:compass` function is a powerful function used to draw curves. Notably, it accepts a function for the scale parameter which permits the drawing of complex shapes. You can look at the code for `draft:star` and `draft:egg` for examples of usage. You can also look at the `draft:compass` function too see how it is called.
+ - The `draft:compass` function is a powerful function used to draw curves.
+ Notably, it accepts a function for the scale parameter which permits the
+ drawing of complex shapes. You can look at the code for `draft:star` and
+ `draft:egg` for examples of usage. You can also look at the `draft:compass`
+ function too see how it is called.
 
  - The linkers create line between points. Try them, they are quite powerful!
 

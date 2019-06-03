@@ -430,7 +430,9 @@ end
   @return  table    vertices {x1, y1, x2, y2, ...}
   @uses    self:polygon(), self:line()
 --]]
-function draft:compass(cx, cy, width, arcAngle, startAngle, numSegments, wrap, scale, mode)
+function draft:compass(
+    cx, cy, width, arcAngle, startAngle, numSegments, wrap, scale, mode
+  )
   if mode == nil then mode = self.mode end
   local radius = width / 2
   startAngle = startAngle or 0
@@ -481,7 +483,9 @@ end
   @uses    self:compass()
 --]]
 function draft:circle(cx, cy, radius, numSegments, mode)
-  return self:compass(cx, cy, radius, 2 * math.pi, 0, numSegments, true, nil, mode)
+  return self:compass(
+    cx, cy, radius, 2 * math.pi, 0, numSegments, true, nil, mode
+  )
 end
 
 --[[
@@ -498,7 +502,9 @@ end
   @uses    self:compass()
 --]]
 function draft:arc(cx, cy, radius, arcAngle, startAngle, numSegments, mode)
-  return self:compass(cx, cy, radius, arcAngle, startAngle, numSegments, false, nil, mode)
+  return self:compass(
+    cx, cy, radius, arcAngle, startAngle, numSegments, false, nil, mode
+  )
 end
 
 --[[
@@ -515,7 +521,9 @@ end
   @uses    self:compass()
 --]]
 function draft:bow(cx, cy, radius, arcAngle, startAngle, numSegments, mode)
-  return self:compass(cx, cy, radius, arcAngle, startAngle, numSegments, true, nil, mode)
+  return self:compass(
+    cx, cy, radius, arcAngle, startAngle, numSegments, true, nil, mode
+  )
 end
 
 --[[
@@ -532,7 +540,9 @@ end
   @uses    self:compass(), appendVertices(), self:polygon()
 --]]
 function draft:pie(cx, cy, radius, arcAngle, startAngle, numSegments, mode)
-  local vertices = self:compass(cx, cy, radius, arcAngle, startAngle, numSegments, false, nil, false)
+  local vertices = self:compass(
+    cx, cy, radius, arcAngle, startAngle, numSegments, false, nil, false
+  )
   vertices = appendVertices(vertices, {cx, cy})
   return self:polygon(vertices, mode)
 end
@@ -550,7 +560,9 @@ end
   @uses    self:compass()
 --]]
 function draft:ellipse(cx, cy, width, height, numSegments, mode)
-  return self:compass(cx, cy, width, 2 * math.pi, 0, numSegments, true, {1, height / width}, mode)
+  return self:compass(
+    cx, cy, width, 2 * math.pi, 0, numSegments, true, {1, height / width}, mode
+  )
 end
 
 --[[
@@ -568,7 +580,9 @@ end
   @uses    self:compass()
 --]]
 function draft:ellipticArc(cx, cy, width, height, arcAngle, startAngle, numSegments, mode)
-  return self:compass(cx, cy, width, arcAngle, startAngle, numSegments, false, {1, height / width}, mode)
+  return self:compass(
+    cx, cy, width, arcAngle, startAngle, numSegments, false, {1, height / width}, mode
+  )
 end
 
 --[[
@@ -586,7 +600,9 @@ end
   @uses    self:compass()
 --]]
 function draft:ellipticBow(cx, cy, width, height, arcAngle, startAngle, numSegments, mode)
-  return self:compass(cx, cy, width, arcAngle, startAngle, numSegments, true, {1, height / width}, mode)
+  return self:compass(
+    cx, cy, width, arcAngle, startAngle, numSegments, true, {1, height / width}, mode
+  )
 end
 
 --[[
@@ -604,7 +620,9 @@ end
   @uses    self:compass(), appendVertices(), self:polygon()
 --]]
 function draft:ellipticPie(cx, cy, width, height, arcAngle, startAngle, numSegments, mode)
-  local vertices = self:compass(cx, cy, width, arcAngle, startAngle, numSegments, false, {1, height / width}, false)
+  local vertices = self:compass(
+    cx, cy, width, arcAngle, startAngle, numSegments, false, {1, height / width}, false
+  )
   vertices = appendVertices(vertices, {cx, cy})
   return self:polygon(vertices, mode)
 end
@@ -622,7 +640,9 @@ end
   @uses    self:compass()
 --]]
 function draft:semicircle(cx, cy, width, startAngle, numSegments, mode)
-  return self:compass(cx, cy, width / 2, math.rad(180), startAngle, numSegments, false, nil, mode)
+  return self:compass(
+    cx, cy, width / 2, math.rad(180), startAngle, numSegments, false, nil, mode
+  )
 end
 
 --[[
@@ -638,7 +658,9 @@ end
   @uses    self:compass()
 --]]
 function draft:dome(cx, cy, width, startAngle, numSegments, mode)
-  return self:compass(cx, cy, width / 2, math.rad(180), startAngle, numSegments, true, nil, mode)
+  return self:compass(
+    cx, cy, width / 2, math.rad(180), startAngle, numSegments, true, nil, mode
+  )
 end
 
 ----------------------------------------------------
@@ -668,7 +690,9 @@ function draft:star(cx, cy, width, widthInner, numPoints, startAngle, mode)
     end
     return cx, cy
   end
-  return self:compass(cx, cy, width, 2 * math.pi, startAngle, numPoints * 2, true, scale, mode)
+  return self:compass(
+    cx, cy, width, 2 * math.pi, startAngle, numPoints * 2, true, scale, mode
+  )
 end
 
 --[[
